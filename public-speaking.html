@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public speaking | Nika Jurlin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #f0f0f0;
+      padding: 1em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 1em;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-top: 1em;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .project img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .project img:hover {
+      transform: scale(1.03);
+    }
+
+    .project-summary {
+      max-width: 600px;
+    }
+
+    .project-summary p {
+      margin: 0.4em 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .project img {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .project-summary {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="astronomy.html">Astronomy</a>
+    <a href="art.html">Fashion, Graphic Design, Art</a>
+    <a href="datascience.html">Data Science</a>
+    <a href="public-speaking.html">Public Speaking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Data Science Projects</h1>
+
+  <div class="project-grid">
+
+    <!-- Project 1 -->
+    <div class="project">
+      <a href="https://thelongcenter.org/events/neildegrassetyson2024/" target="_blank">
+        <img src="images/ndt1.png" alt="Neil deGrasse Tyson 2024">
+      </a>
+      <div class="project-summary">
+        <p><strong>Two appearences preceeding Dr. Neil deGrasse Tyson</strong></p>
+        <!-- <p><strong>Who?</strong> Nika</p> -->
+        <p><strong>When?</strong> 2023 and 2024</p>
+        <p><strong>Context?</strong> Dr. Neil deGrasse Tyson, award-winning astrophysicist and author, delivered two public lectures at the Long Center, where he explored a range of scientific topics, primarily in astronomy.</p>
+        <p><strong>What did I do?</strong> I gave a special interactive pre-show talk titled <em>"Black Holes and Gravitational Lensing: Looking Through a Giant Magnifying Glass"</em>, engaging the audience with visuals and accessible explanations of complex astrophysical concepts.</p>
+<!--         <p><strong>Take-away message:</strong> Dynamic pricing outperforms flat pricing when it comes to both profitability and fairness</p> -->
+        <p><strong>Why it matters:</strong> Public science communication fosters curiosity, critical thinking, and trust in scientific methods. By making cutting-edge research understandable and exciting, we empower people to engage with science-informed issues that affect society—such as climate change, technological development, or space exploration.</p>
+      </div>
+    </div>
+    
+    <!-- Add more projects here -->
+    
+  </div>
+
+</body>
+</html>
