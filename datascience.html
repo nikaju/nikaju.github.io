@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astronomy Projects | Nika Jurlin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #f0f0f0;
+      padding: 1em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 1em;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-top: 1em;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .project img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .project img:hover {
+      transform: scale(1.03);
+    }
+
+    .project-summary {
+      max-width: 600px;
+    }
+
+    .project-summary p {
+      margin: 0.4em 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .project img {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .project-summary {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="astronomy.html">Astronomy</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="design.html">Graphic Design</a>
+    <a href="datascience.html">Other Data Science</a>
+    <a href="public-speaking.html">Public Speaking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Data Science Projects</h1>
+
+  <div class="project-grid">
+
+    <!-- Project 1 -->
+    <div class="project">
+      <a href="https://www.aanda.org/articles/aa/pdf/2024/02/aa45821-22.pdf" target="_blank">
+        <img src="images/Fig5.png" alt="Price optimisation">
+      </a>
+      <div class="project-summary">
+        <p><strong>Price optimisation</strong></p>
+        <!-- <p><strong>Who?</strong> Nika</p> -->
+        <p><strong>When?</strong> 2025</p>
+        <p><strong>Why?</strong> For fun :)</p>
+        <p><strong>Context?</strong> One of the promotion features in second-hand retail apps is the “push up” feature that boosts item visibility. As a result, the item that is up for sale will get
+significantly more views (on average). Currently, it costs €2 to buy the “push up” feature, but that is not the optimal amount to be charged.
+        <p><strong>What did I do?</strong>I came up with a data-driven approach to evaluate the existing “push up” monetization strategy and gave suggestions on how to improve the monetization of the
+platform and its long-term effects.</p>
+        <p><strong>Take-away message:</strong> Dynamic pricing of a feature is a better option than universal pricing</p>
+        <p><strong>Why important?</strong> Optimises revenue of the company, as well as being fair to the sellers.</p>
+      </div>
+    </div>
+    
+    <!-- Add more projects here -->
+    
+  </div>
+
+</body>
+</html>
