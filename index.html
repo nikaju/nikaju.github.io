@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Nika Jurlin | Portfolio</title>
   <style>
-    /* Global styles */
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Century Gothic', 'Helvetica Neue', sans-serif;
       color: #333;
       scroll-behavior: smooth;
     }
@@ -22,6 +21,7 @@
       align-items: center;
       color: white;
       text-align: center;
+      padding: 0 20px;
     }
 
     nav {
@@ -57,6 +57,66 @@
       margin-top: 0.5em;
     }
 
+    .button-group {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+    }
+
+    .hero-btn {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 0.7em 1.5em;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .hero-btn:hover {
+      background-color: #ffd700;
+      color: black;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background-color: white;
+      min-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+      padding: 0.5em 0;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 0.5em 1.5em;
+      color: black;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #eee;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     section {
       padding: 80px 20px;
       max-width: 900px;
@@ -81,11 +141,18 @@
       h1 {
         font-size: 2.5em;
       }
+
       h2 {
         font-size: 1.5em;
       }
+
       nav a {
         margin: 0 0.8em;
+      }
+
+      .hero-btn {
+        padding: 0.5em 1em;
+        font-size: 0.9em;
       }
     }
   </style>
@@ -102,17 +169,34 @@
   <header>
     <h1>Nika Jurlin, Ph.D.</h1>
     <h2>Data Scientist | Astronomer | Scientific Communicator</h2>
+
+    <div class="button-group">
+      <a href="#about" class="hero-btn">About me</a>
+
+      <div class="dropdown">
+        <button class="hero-btn">Projects ▾</button>
+        <div class="dropdown-content">
+          <a href="astronomy.html">Astronomy</a>
+          <a href="fashion.html">Fashion</a>
+          <a href="design.html">Graphic Design</a>
+          <a href="datascience.html">Other Data Science</a>
+        </div>
+      </div>
+
+      <a href="public-speaking.html" class="hero-btn">Public speaking</a>
+      <a href="#contact" class="hero-btn">Contact</a>
+    </div>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I’m Nika Jurlin, I have 8+ years of experience as a Research & Data Science project leader in competitive academic environments, with results published in top-tier journals and presented at international conferences (30+). <br>
+    <p>Hi, I’m Nika Jurlin. I have 8+ years of experience as a Research & Data Science project leader in competitive academic environments, with results published in top-tier journals and presented at international conferences (30+). <br>
       I have a broad data-driven technical skillset. I have designed and deployed data-intensive pipelines using SQL and Python. <br>
       I have demonstrated experience using statistical methods (regression, Bayesian inference) and creating impactful visualizations for experts and non-experts. <br>
-      I'm self-driven  and pro-active. I founded Astronomy on Tap Groningen, coordinated international scientific collaborations in Europe and the US, delivered outreach talks in front of large audiences, and led an initiative to address unfair practices in the Dutch educational system. <br>
-      <br>
+      I'm self-driven and pro-active. I founded Astronomy on Tap Groningen, coordinated international scientific collaborations in Europe and the US, delivered outreach talks in front of large audiences, and led an initiative to address unfair practices in the Dutch educational system. <br><br>
       I’m interested in research, science, sustainability, and fashion. <br>
-      I’m currently learning new skills to transition from Astrophysics research to a career in sustainability.</p>
+      I’m currently learning new skills to transition from Astrophysics research to a career in sustainability.
+    </p>
   </section>
 
   <section id="projects" class="projects">
@@ -134,7 +218,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Your Name. All rights reserved.
+    &copy; 2025 Nika Jurlin. All rights reserved.
   </footer>
 
 </body>
