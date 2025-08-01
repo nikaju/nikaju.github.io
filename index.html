@@ -1,9 +1,135 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Tryout!</title>
-  </head>
-  <body>
-    <p>Lololo <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      padding: 1em 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.5em;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    h1 {
+      font-size: 4em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-top: 0.5em;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .projects img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      margin-bottom: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #f2f2f2;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      nav a {
+        margin: 0 0.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Your Name</h1>
+    <h2>Your Profession or Tagline</h2>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Write a short paragraph about who you are, what you do, and what you're passionate about.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <p>Highlight a few recent projects.</p>
+    <img src="https://via.placeholder.com/400x250" alt="Project image">
+    <p><strong>Project Title</strong><br>Description of the project.</p>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can list your experience here, or link to a downloadable resume (PDF).</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+</body>
 </html>
