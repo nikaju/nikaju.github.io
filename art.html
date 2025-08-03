@@ -5,101 +5,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Art Projects | Nika Jurlin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; background: #fff; color: #333; }
-    nav { background: #f0f0f0; padding: 1em; text-align: center; position: sticky; top: 0; }
-    nav a { margin: 0 1em; text-decoration: none; color: #333; font-weight: bold; }
-    nav a:hover { color: #ffd700; }
-    h1 { text-align: center; margin: 1em 0; }
-    .project-grid { max-width: 1000px; margin: auto; padding: 1em; display: flex; flex-direction: column; gap: 2em; }
-    .project { display: flex; flex-wrap: wrap; gap: 1em; align-items: center; }
-    .project img { width: 300px; border-radius: 12px; cursor: pointer; transition: 0.3s; }
-    .project img:hover { transform: scale(1.03); }
-    .project-summary { max-width: 1000px; }
-    .project-summary p { margin: 0.4em 0; line-height: 1.6; text-align: justify; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+      display: flex; /* ADDED for sidebar layout */
+    }
 
+    /* SIDEBAR */
+    **.sidebar {
+      width: 150px;
+      background: #f0f0f0;
+      padding: 2em 1em;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
 
+    .sidebar h1 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 1.2em;
+      text-align: center;
+      margin: 0;
+      font-weight: 600;
+    }**
 
-/*     ZA SLIKE */
+    nav {
+      background: #f0f0f0;
+      padding: 1em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    **.main-content {
+      flex-grow: 1;
+      padding: 2em;
+    }**
+
+    **.main-title {
+      text-align: center;
+      font-weight: 100;
+      font-size: 3em;
+      margin-bottom: 1em;
+    }**
+
+    .project-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      align-items: center;
+    }
+
+    .project img {
+      width: 300px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .project img:hover {
+      transform: scale(1.03);
+    }
+
+    .project-summary {
+      max-width: 1000px;
+    }
+
+    .project-summary p {
+      margin: 0.4em 0;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* IMAGE SECTION */
     .image-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  margin-bottom: 2em;
-}
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      margin-bottom: 2em;
+    }
 
-.large-image {
-  width: 80%;  /* adjust as needed */
-  max-width: 600px;
-  border-radius: 8px;
-}
+    .large-image {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
 
-.image-row {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  flex-wrap: wrap; /* so it stays responsive on small screens */
-}
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
 
-.small-image {
-  width: 30%;
-  max-width: 200px;
-  border-radius: 8px;
-}
-/*     GOTOVO ZA SLIKE */
+    .small-image {
+      width: 30%;
+      max-width: 200px;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="astronomy.html">Astronomy</a>
-    <a href="art.html">Art, Graphic Design, Fashion</a>
-    <a href="datascience.html">Data Science</a>
-    <a href="public-speaking.html">Public Speaking</a>
-    <a href="index.html#contact" class="hero-btn">Contact</a>
-  </nav>
-  <h1>Art Projects</h1>
-  <div class="project-grid">
-    <div class="project">
-      <div class="project-summary">
-        <div class="image-column">
-          <img src="images/bt1.png" alt="..." class="large-image">
-          <img src="images/bt2.png" alt="..." class="large-image">
-          <img src="images/bt3.png" alt="..." class="large-image">
-        </div>
 
-        <div class="image-row">
-          <img src="images/bt4.png" alt="..." class="small-image">
-          <img src="images/bt5.png" alt="..." class="small-image">
-          <img src="images/bt6.png" alt="..." class="small-image">
-        </div>
-        
-        <p><b><big>Black Trough </b>, 2017 (in collaboration with Ana Sladetic, PhD, a Croatian contemporary artist) installation, 100 x 75 x 110 cm 
-        <br>
+  <!-- SIDEBAR WITH ROTATED TITLE -->
+  **<div class="sidebar">
+    <h1>Art Projects</h1>
+  </div>**
 
-Dark matter is an invisible and hypothetical form of matter that does not interact with light or other electromagnetic radiation. It is one of the greatest mysteries in astrophysics today.
-Although it has never been directly observed, scientists have inferred its existence from gravitational effects, such as the motion of visible matter (stars, gas, dust), the "bending" of light as it travels through space (gravitational lensing), its impact on large structures like galaxy clusters, and its imprint on the cosmic microwave background (CMB).
-Dark matter is present throughout the universe, surrounding and passing through everything we can detect with our eyes or instruments.
+  <!-- MAIN CONTENT AREA -->
+  **<div class="main-content">**
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="astronomy.html">Astronomy</a>
+      <a href="art.html">Art, Graphic Design, Fashion</a>
+      <a href="datascience.html">Data Science</a>
+      <a href="public-speaking.html">Public Speaking</a>
+      <a href="index.html#contact" class="hero-btn">Contact</a>
+    </nav>
 
-The installation <b>Black Trough</b> explores the idea of dark matter from an artistic perspective. Using a particular type of fluid, it evokes the invisible presence of dark matter as it weaves through galaxies, stars, and all detectable matter.
-        
-        <br>
-        <br>
-Fluids are generally classified as either Newtonian or non-Newtonian. A <b>Newtonian fluid</b> has a constant viscosity (resistance to flow), regardless of the force applied to it. In simple terms, if you stir it faster, it flows faster—but its thickness stays the same. Water, air, and many light oils are examples.
+    <!-- LARGE TITLE -->
+    **<div class="main-title">Black Trough</div>**
 
-In contrast, a <b>non-Newtonian fluid</b> changes its viscosity depending on the force applied. The fluid used in <b>Black Trough</b> is non-Newtonian and was chosen to symbolically represent dark matter because of its responsive nature. When a small force is applied, it behaves like a thick, viscous material. As the force increases, it becomes less viscous and flows more freely. Visitors are encouraged to interact with it by touching it or placing objects on its surface—to explore how it responds, retracts, and transforms in real time.</p>
-<br><br>
+    <div class="project-grid">
+      <div class="project">
+        <div class="project-summary">
 
+          <!-- IMAGES -->
+          <div class="image-column">
+            <img src="images/bt1.png" alt="..." class="large-image">
+            <img src="images/bt2.png" alt="..." class="large-image">
+            <img src="images/bt3.png" alt="..." class="large-image">
+          </div>
 
-        <b>Black Trough </b> <a href="http://anasladetic.com/wp-content/uploads/2020/06/IMG_6184.mov" target="_blank">VIDEO</a> <br>
-        
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+          <div class="image-row">
+            <img src="images/bt4.png" alt="..." class="small-image">
+            <img src="images/bt5.png" alt="..." class="small-image">
+            <img src="images/bt6.png" alt="..." class="small-image">
+          </div>
 
-<!-- Repeat similar structure for design.html, datascience.html, public-speaking.html -->
+          <!-- TEXT -->
+          <p><b>Black Trough</b>, 2017 (in collaboration with Ana Sladetić, PhD, a Croatian contemporary artist). Installation, 100 x 75 x 110 cm</p>
+
+          <p>Dark matter is an invisible and hypothetical form of matter that does not interact with light or other electromagnetic radiation. It is one of the greatest mysteries in astrophysics today. Although it has never been directly observed, scientists have inferred its existence from gravitational effects, such as the motion of visible matter (stars, gas, dust), the "bending" of light as it travels through space (gravitational lensing), its impact on large structures like galaxy clusters, and its imprint on the cosmic microwave background (CMB). Dark matter is present throughout the universe, surrounding and passing through everything we can detect with our eyes or instruments.</p>
+
+          <p>The installation <b>Black Trough</b> explores the idea of dark matter from an artistic perspective. Using a particular type of fluid, it evokes the invisible presence of dark matter as it weaves through galaxies, stars, and all detectable matter.</p>
+
+          <p>Fluids are generally classified as either Newtonian or non-Newtonian. A <b>Newtonian fluid</b> has a constant viscosity (resistance to flow), regardless of the force applied to it. In simple terms, if you stir it faster, it flows faster—but its thickness stays the same. Water, air, and many light oils are examples.</p>
+
+          <p>In contrast, a <b>non-Newtonian fluid</b> changes its viscosity depending on the force applied. The fluid used in <b>Black Trough</b> is non-Newtonian and was chosen to symbolically represent dark matter because of its responsive nature. When a small force is applied, it behaves like a thick, viscous material. As the force increases, it becomes less viscous and flows more freely. Visitors are encouraged to interact with it by touching it or placing objects on its surface—to e
