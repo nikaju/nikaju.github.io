@@ -134,6 +134,41 @@
       max-width: 200px;
       border-radius: 8px;
     }
+
+
+/*     ADDED FOR DIFFERENT PICTURE GRID */
+.top-section {
+  display: flex;
+  gap: 20px; /* Adjust spacing as needed */
+  margin-bottom: 20px; /* Space between top and bottom sections */
+}
+
+.left-image img,
+.right-stack img,
+.image-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.left-image {
+  flex: 1;
+}
+
+.right-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+}
+
+
+    
   </style>
 </head>
 <body>
@@ -162,8 +197,8 @@
       <div class="project">
         <div class="project-summary">
 
-          <!-- IMAGES -->
-           <div class="image-column">
+          <!-- IMAGES OLD-->
+<!--            <div class="image-column">
             <img src="images/bt1.jpg" alt="bt1" class="art-image"> 
             <img src="images/bt2.jpg" alt="bt2" class="art-image">
             <img src="images/bt4.jpg" alt="bt4" class="art-image">
@@ -172,7 +207,24 @@
             <img src="images/bt3.jpeg" alt="bt3" class="art-image">
             <img src="images/bt5.jpg" alt="bt5" class="art-image">
             <img src="images/bt6.jpg" alt="bt6" class="art-image">
-          </div>
+          </div> -->
+
+
+          <div class="top-section">
+  <div class="left-image">
+    <img src="images/bt1.jpg" alt="bt1" class="art-image">
+  </div>
+  <div class="right-stack">
+    <img src="images/bt2.jpg" alt="bt2" class="art-image">
+    <img src="images/bt4.jpg" alt="bt4" class="art-image">
+  </div>
+</div>
+
+<div class="image-row">
+  <img src="images/bt3.jpeg" alt="bt3" class="art-image">
+  <img src="images/bt5.jpg" alt="bt5" class="art-image">
+  <img src="images/bt6.jpg" alt="bt6" class="art-image">
+</div>
 
           <!-- TEXT -->
           <p><b>Black Trough</b>, 2017 (in collaboration with Ana Sladetić, PhD, a Croatian contemporary artist). Installation, 100 x 75 x 110 cm</p>
