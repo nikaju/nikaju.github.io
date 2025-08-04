@@ -45,6 +45,170 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+      display: flex; /* ADDED for sidebar layout */
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 150px;
+      background: #f0f0f0;
+      padding: 2em 1em;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+
+    .sidebar h1 {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 1.2em;
+      text-align: center;
+      margin: 0;
+      font-weight: 600;
+      padding-top: 4em;        /* Move it down */
+      padding-left: 0.5em;     /* Add some space from the edge */
+    }
+
+    nav {
+      background: #f0f0f0;
+      padding: 1em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 2em;
+    }
+
+    .main-title {
+      text-align: center;
+      font-weight: 100;
+      font-size: 3em;
+      margin-bottom: 1em;
+    }
+
+/*     .main-title {
+      font-size: 2.5em;
+      text-align: center;
+      margin-top: 1em;
+    } */
+
+    .project-grid {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      align-items: center;
+    }
+
+    .project img {
+      width: 300px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .project img:hover {
+      transform: scale(1.03);
+    }
+
+    .project-summary {
+      max-width: 1000px;
+    }
+
+    .project-summary p {
+      margin: 0.4em 0;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* IMAGE SECTION */
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      margin-bottom: 2em;
+    }
+
+    .large-image {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    .small-image {
+      width: 30%;
+      max-width: 200px;
+      border-radius: 8px;
+    }
+
+
+/*     ADDED FOR DIFFERENT PICTURE GRID */
+.top-section {
+  display: flex;
+  gap: 20px; /* Adjust spacing as needed */
+  margin-bottom: 20px; /* Space between top and bottom sections */
+}
+
+.left-image img,
+.right-stack img,
+.image-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.left-image {
+  flex: 1;
+}
+
+.right-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+}
+
+			
 </style>
 <link rel='stylesheet' id='contact-form-7-css'  href='https://anasladetic.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6' type='text/css' media='all' />
 <link rel='stylesheet' id='woocommerce-layout-css'  href='//anasladetic.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.6.11' type='text/css' media='all' />
