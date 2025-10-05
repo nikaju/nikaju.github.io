@@ -177,7 +177,31 @@
   z-index: 9999;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-    
+  
+    .about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+  justify-content: center;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-photo {
+  flex: 0 0 250px;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
     
   </style>
 </head>
@@ -217,15 +241,22 @@
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I’m Nika Jurlin. I have <b>8+ years of experience as a Research & Data Science project leader</b> in competitive academic environments, with results published in top-tier journals and presented at international conferences (30+). <br>
+  <h2>About Me</h2>
+  <div class="about-container">
+    <div class="about-photo">
+      <img src="images/nika-profile.jpg" alt="Nika Jurlin portrait">
+    </div>
+    <div class="about-text">
+      <p>Hi, I’m Nika Jurlin. I have <b>8+ years of experience as a Research & Data Science project leader</b> in competitive academic environments, with results published in top-tier journals and presented at international conferences (30+). <br>
       I have a <b>broad data-driven technical skillset</b>. I have designed and deployed data-intensive pipelines using <b>SQL</b> and <b>Python</b>. <br>
       I have demonstrated experience using <b>statistical methods</b> (regression, Bayesian inference) and creating impactful visualizations for experts and non-experts. <br>
       I'm self-driven and pro-active. I <b>founded Astronomy on Tap Groningen</b>, coordinated international scientific collaborations in Europe and the US, delivered outreach talks in front of large audiences, and led an initiative to address unfair practices in the Dutch educational system. <br><br>
       I’m interested in <b>research</b>, <b>science</b>, <b>sustainability</b>, and <b>fashion</b>. <br>
       I’m currently learning new skills to transition from Astrophysics research to a career in sustainability.
-    </p>
-  </section>
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- PROJECTS AND RESUME
   <section id="projects" class="projects">
