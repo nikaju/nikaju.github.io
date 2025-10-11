@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Public speaking | Nika Jurlin</title>
+  <title>Public Speaking | Nika Jurlin</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
@@ -15,6 +15,7 @@
       scroll-behavior: smooth;
     }
 
+    /* NAVIGATION BAR */
     nav {
       background-color: #f0f0f0;
       padding: 1em;
@@ -22,6 +23,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
     nav a {
@@ -29,6 +31,7 @@
       color: #333;
       font-weight: bold;
       text-decoration: none;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -39,8 +42,10 @@
       font-size: 2.5em;
       text-align: center;
       margin-top: 1em;
+      font-weight: 400;
     }
 
+    /* PROJECT GRID */
     .project-grid {
       display: flex;
       flex-direction: column;
@@ -54,7 +59,7 @@
       display: flex;
       flex-direction: row;
       gap: 20px;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
 
@@ -79,10 +84,29 @@
       line-height: 1.6;
     }
 
+    /* ===== MOBILE VIEW ===== */
     @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.8em 0.4em;
+      }
+
+      nav a {
+        margin: 0.4em 0.6em;
+        font-size: 0.9em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+        margin-top: 1em;
+      }
+
       .project {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: left;
       }
 
       .project img {
@@ -92,6 +116,16 @@
 
       .project-summary {
         max-width: 100%;
+        font-size: 0.95em;
+      }
+
+      .project-summary p {
+        line-height: 1.5;
+      }
+
+      .project-grid {
+        gap: 30px;
+        padding: 0 15px;
       }
     }
   </style>
@@ -110,30 +144,26 @@
 
   <h1>Public Speaking</h1>
 
-<div class="project-grid">
+  <div class="project-grid">
 
-  <!-- Project 1 -->
-  <div class="project">
-    <div class="project-summary">
+    <!-- Project 1 -->
+    <div class="project">
+      <div class="project-summary">
+        <a href="https://thelongcenter.org/events/neildegrassetyson2024/" target="_blank">
+          <p><strong><big>Two appearances preceding Dr. Neil deGrasse Tyson</big></strong></p>
+        </a>
+        <p><strong>When?</strong> 2023 and 2024</p>
+        <p><strong>Context?</strong> Dr. Neil deGrasse Tyson, award-winning astrophysicist and author, delivered two public lectures at the Long Center, exploring a range of scientific topics, primarily in astronomy.</p>
+        <p><strong>What did I do?</strong> I gave a special interactive pre-show talk titled <em>"Black Holes"</em> in 2023 and <em>"Gravitational Lensing: Looking Through a Giant Magnifying Glass"</em>, with my colleague Dr. Simon Gazagnes in 2024, engaging the audience with visuals and accessible explanations of complex astrophysical concepts.</p>
+        <p><strong>Why it matters:</strong> Public science communication fosters curiosity, critical thinking, and trust in scientific methods. By making cutting-edge research understandable and exciting, we empower people to engage with science-informed issues that affect society, such as climate change, technological development, or space exploration.</p>
+      </div>
+
       <a href="https://thelongcenter.org/events/neildegrassetyson2024/" target="_blank">
-      <p><strong><big>Two appearances preceding Dr. Neil deGrasse Tyson</big></strong></p> </a>
-      <p><strong>When?</strong> 2023 and 2024</p>
-      <p><strong>Context?</strong> Dr. Neil deGrasse Tyson, award-winning astrophysicist and author, delivered two public lectures at the Long Center, where he explored a range of scientific topics, primarily in astronomy.</p>
-      <p><strong>What did I do?</strong> I gave a special interactive pre-show talk titled <em>"Black Holes"</em> in 2023 and <em>"Gravitational Lensing: Looking Through a Giant Magnifying Glass"</em>, with my colleague Dr. Simon Gazagnes in 2024, engaging the audience with visuals and accessible explanations of complex astrophysical concepts.</p>
-      <p><strong>Why it matters:</strong> Public science communication fosters curiosity, critical thinking, and trust in scientific methods. By making cutting-edge research understandable and exciting, we empower people to engage with science-informed issues that affect society such as climate change, technological development, or space exploration.</p>
+        <img src="images/ndt1.png" alt="Neil deGrasse Tyson 2024">
+        <img src="images/ndt2.png" alt="Neil deGrasse Tyson 2024">
+      </a>
     </div>
 
-    <a href="https://thelongcenter.org/events/neildegrassetyson2024/" target="_blank">
-      <img src="images/ndt1.png" alt="Neil deGrasse Tyson 2024">
-      <img src="images/ndt2.png" alt="Neil deGrasse Tyson 2024">
-    </a>
-  </div>
-
-</div>
-
-    
-    <!-- Add more projects here -->
-    
   </div>
 
 </body>
