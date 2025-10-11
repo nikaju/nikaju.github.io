@@ -108,58 +108,65 @@
     }
 
     /* ---------- RESPONSIVE DESIGN ---------- */
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
 
-      .sidebar {
-        width: 100%;
-        box-shadow: none;
-        padding: 1em 0;
-        background: #fff;
-        text-align: center;
-      }
+  .sidebar {
+    width: 100%;
+    box-shadow: none;
+    padding: 1em 0;
+    background: #fff;
+    text-align: center;
+  }
 
-      .sidebar h1 {
-        writing-mode: horizontal-tb;
-        transform: none;
-        font-size: 1.5em;
-        padding: 0;
-      }
+  .sidebar h1 {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 1.5em;
+    padding: 0;
+  }
 
-      nav {
-        font-size: 0.9em;
-        padding: 0.8em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+  nav {
+    font-size: 0.9em;
+    padding: 0.8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-      nav a {
-        margin: 0.4em 0.6em;
-        display: inline-block;
-      }
+  nav a {
+    margin: 0.4em 0.6em;
+    display: inline-block;
+  }
 
-      .main-title {
-        font-size: 1.8em;
-        margin: 1em 0;
-      }
+  .main-title {
+    font-size: 1.8em;
+    margin: 1em 0;
+  }
 
-      .download-btn {
-        padding: 0.6em 1.2em;
-        font-size: 0.9em;
-      }
+  .download-btn {
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+  }
 
-      .pdf-container {
-        width: 100%;
-        margin-bottom: 1em;
-      }
+  .pdf-container {
+    width: 100%;
+    overflow: hidden; /* hides extra edges */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
 
-      iframe {
-        height: 70vh;
-      }
-    }
+  iframe {
+    width: 120%;              /* make it slightly wider to fill horizontally */
+    height: 80vh;             /* fit better vertically */
+    transform: scale(0.85);   /* scales the PDF slightly smaller */
+    transform-origin: top center;
+  }
+}
+
   </style>
 </head>
 <body>
