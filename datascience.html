@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Astronomy Projects | Nika Jurlin</title>
+  <title>Data Science Projects | Nika Jurlin</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
@@ -15,6 +15,7 @@
       scroll-behavior: smooth;
     }
 
+    /* NAVIGATION BAR */
     nav {
       background-color: #f0f0f0;
       padding: 1em;
@@ -22,6 +23,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
     nav a {
@@ -29,6 +31,7 @@
       color: #333;
       font-weight: bold;
       text-decoration: none;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -39,8 +42,10 @@
       font-size: 2.5em;
       text-align: center;
       margin-top: 1em;
+      font-weight: 400;
     }
 
+    /* PROJECT GRID */
     .project-grid {
       display: flex;
       flex-direction: column;
@@ -79,10 +84,29 @@
       line-height: 1.6;
     }
 
+    /* ===== MOBILE VIEW ===== */
     @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.8em 0.4em;
+      }
+
+      nav a {
+        margin: 0.4em 0.6em;
+        font-size: 0.9em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+        margin-top: 1em;
+      }
+
       .project {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: left;
       }
 
       .project img {
@@ -92,6 +116,16 @@
 
       .project-summary {
         max-width: 100%;
+        font-size: 0.95em;
+      }
+
+      .project-summary p {
+        line-height: 1.5;
+      }
+
+      .project-grid {
+        gap: 30px;
+        padding: 0 15px;
       }
     }
   </style>
@@ -111,7 +145,6 @@
   <h1>Data Science Projects</h1>
 
   <div class="project-grid">
-
     <!-- Project 1 -->
     <div class="project">
       <a href="files/price_optimization.pdf" target="_blank">
@@ -119,18 +152,14 @@
       </a>
       <div class="project-summary">
         <p><strong>Price optimisation</strong></p>
-        <!-- <p><strong>Who?</strong> Nika</p> -->
         <p><strong>When?</strong> 2025</p>
         <p><strong>Why?</strong> For fun :)</p>
-        <p><strong>Context?</strong> Many second-hand retail apps offer a “push up” feature that temporarily boosts an item's visibility, often leading to a spike in views and faster sales. I explored how to price this feature more effectively using a mock catalogue of 238 items and over 13 million listings. While the default price is €2 per “push up,” I questioned whether this flat rate was optimal.
-        <p><strong>What did I do?</strong>I developed a data-driven method to assess the current monetization strategy for the “push up” feature and proposed improvements to maximize platform revenue while considering long-term seller engagement.</p>
-        <p><strong>Take-away message:</strong> Dynamic pricing outperforms flat pricing when it comes to both profitability and fairness</p>
-        <p><strong>Why it matters?</strong> Smart pricing increases company revenue and builds trust with sellers by offering fairer, more tailored options</p>
+        <p><strong>Context?</strong> Many second-hand retail apps offer a “push up” feature that temporarily boosts an item's visibility, often leading to a spike in views and faster sales. I explored how to price this feature more effectively using a mock catalogue of 238 items and over 13 million listings. While the default price is €2 per “push up,” I questioned whether this flat rate was optimal.</p>
+        <p><strong>What did I do?</strong> I developed a data-driven method to assess the current monetization strategy for the “push up” feature and proposed improvements to maximize platform revenue while considering long-term seller engagement.</p>
+        <p><strong>Take-away message:</strong> Dynamic pricing outperforms flat pricing when it comes to both profitability and fairness.</p>
+        <p><strong>Why it matters?</strong> Smart pricing increases company revenue and builds trust with sellers by offering fairer, more tailored options.</p>
       </div>
     </div>
-    
-    <!-- Add more projects here -->
-    
   </div>
 
 </body>
